@@ -25,3 +25,7 @@ function removeSearchLayer() {
     mobileMenu.classList.remove('active');
     tgBody.classList.remove('active');
   }
+
+  function closePop(e) {
+    $(e).closest('.overay_wrap').removeClass('on');
+  }

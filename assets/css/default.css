@@ -784,6 +784,267 @@ main .right_contents .sns_list svg {
   display: none;
 }
 
+.overay_wrap {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.48);
+  z-index: 10;
+}
+
+.overay_wrap.on {
+  display: block;
+}
+
+.members_pop {
+  width: 448px;
+  border-radius: 6px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.members_pop .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #4c79c5;
+  height: 63px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+}
+
+.members_pop .header .btn_closed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32px;
+  height: 32px;
+  border: 0 solid #000;
+  background-color: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 300;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.members_pop .header .btn_closed:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.members_pop .header .btn_closed svg {
+  color: #fff;
+  width: 12px;
+  height: 12px;
+}
+
+.members_pop .members_list {
+  height: 500px;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.members_pop .members_list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  cursor: pointer;
+}
+
+.members_pop .members_list li:hover {
+  background-color: #f0f3f5;
+}
+
+.members_pop .members_list li .btn_follow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  width: 128px;
+  height: 40px;
+  padding: 0 16px;
+  background-color: #4c79c5;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 16px;
+  border: 0 solid #000;
+}
+
+.members_pop .members_list li .user_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.members_pop .members_list li .user_img {
+  position: relative;
+}
+
+.members_pop .members_list li .user_img span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow-y: hidden;
+}
+
+.members_pop .members_list li .user_img span img {
+  width: 100%;
+}
+
+.members_pop .members_list li .user_img svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.members_pop .members_list li .user_name {
+  padding: 0 16px;
+  font-size: 17px;
+  color: #17181b;
+}
+
+.sign_pop {
+  width: 496px;
+  border-radius: 6px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.sign_pop .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  color: #17181b;
+  font-weight: 600;
+  position: relative;
+  letter-spacing: -0.03em;
+}
+
+.sign_pop .header .btn_closed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32px;
+  height: 32px;
+  border: 0 solid #000;
+  background-color: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 300;
+  position: absolute;
+  right: -15px;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.sign_pop .header .btn_closed:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.sign_pop .header .btn_closed svg {
+  color: gray;
+  width: 12px;
+  height: 12px;
+  border: 1px;
+  stroke-width: 1px;
+}
+
+.sign_pop .txt {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #17181b;
+  line-height: 21px;
+  margin-bottom: 40px;
+}
+
+.sign_pop a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border: 2px solid #5f87c8;
+  font-size: 16px;
+  font-weight: 500;
+  color: #17181b;
+  padding: 16px 0 16px 96px;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff url(../img/walletconnect-logo.png) no-repeat right 96px top 50%/25px 20px;
+}
+
+.sign_pop a:hover {
+  background-color: #EDF2F7;
+}
+
+.sign_pop a + a {
+  margin-top: 15px;
+  background: #fff url(../img/coinbase-wallet.png) no-repeat right 96px top 50%/25px;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   main nav {
     width: 288px;
@@ -1014,5 +1275,93 @@ main .right_contents .sns_list svg {
   body.active {
     height: 100vh;
     overflow: hidden;
+  }
+  .overay_wrap.on {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .members_pop {
+    width: calc(100% - 20px);
+    max-height: calc(100% - 7.5em);
+    position: relative;
+    left: auto;
+    top: auto;
+    margin: 0 auto;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .members_pop .header {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 0%;
+            flex: 0 1 0%;
+    padding: 16px 40px;
+    font-size: 18px;
+  }
+  .members_pop .members_list {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0%;
+            flex: 1 1 0%;
+  }
+  .members_pop .members_list li .btn_follow {
+    width: 90px;
+    padding: 0 5%;
+  }
+  .members_pop .members_list li .user_name {
+    padding: 0 16px;
+    font-size: 14px;
+    color: #17181b;
+  }
+  .sign_pop {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 6px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    overflow: hidden;
+    padding: 40px;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .sign_pop a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    border: 2px solid #5f87c8;
+    font-size: 16px;
+    font-weight: 500;
+    color: #17181b;
+    padding: 16px 0 16px 16px;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: #fff url(../img/walletconnect-logo.png) no-repeat right 20px top 50%/25px 20px;
+  }
+  .sign_pop a:hover {
+    background-color: #EDF2F7;
+  }
+  .sign_pop a + a {
+    margin-top: 15px;
+    background: #fff url(../img/coinbase-wallet.png) no-repeat right 20px top 50%/25px;
   }
 }

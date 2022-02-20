@@ -271,15 +271,14 @@ main {
                     .text_box {
                         .user_name {
                             a {
-                               font-size: 16px; 
-                               font-weight: 600;
+                                font-size: 16px; 
+                                font-weight: 600;
                                 span {
                                     color:#17181b;
                                     &:hover {
                                         text-decoration: underline;
                                     }
                                 }
-                               
                             }
                         }
                         .time_info {
@@ -530,8 +529,195 @@ main {
 .search_wrap_mobile {
     display: none;
 }
+.overay_wrap {
+    display: none;
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100vh;
+    background:rgba(0, 0, 0, 0.48);
+    z-index: 10;
+    &.on {
+        display: block;
+    }
+}
+.members_pop {
+    width: 448px;
+    border-radius: 6px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #4c79c5;
+        height: 63px;
+        font-size: 20px;
+        color:#fff;
+        font-weight: 600;
+        position: relative;
+        .btn_closed {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            border: 0 solid #000;
+            background-color: transparent;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 300;
+            &:hover {
+                background:rgba(0, 0, 0, 0.06);
+            }
+            svg {
+                color:#fff;
+                width: 12px;
+                height: 12px;
+            }
+            position: absolute;
+            right: 10px;
+            top:50%;
+            transform: translateY(-50%);
+        }
+    }
+    .members_list {
+        height: 500px;
+        background-color: #fff;
+        overflow-y: auto;
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:8px 16px;
+            border-bottom: 1px solid #e2e8f0;
+            cursor: pointer;
+            &:hover {
+                background-color: #f0f3f5;
+            }
+            .btn_follow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                width: 128px;
+                height: 40px;
+                padding:0 16px;
+                background-color: #4c79c5;
+                border-radius: 40px;
+                color:#fff;
+                font-size: 16px;
+                border: 0 solid #000;
 
-
+            }
+            .user_info {
+                display: flex;
+                align-items: center;
+            }
+            .user_img {
+                position: relative;
+                span {
+                    display: flex;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    overflow-y: hidden;
+                    img {
+                        width: 100%;
+                    }
+                }
+                svg {
+                    position: absolute;
+                    bottom:0;
+                    right:0;
+                    border: 2px solid #fff;
+                    border-radius: 50%;
+                }
+            }
+            .user_name {
+                padding:0 16px;
+                font-size: 17px;
+                color:#17181b
+            }
+        }
+    }
+}
+.sign_pop {
+    width: 496px;
+    border-radius: 6px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    padding:40px;
+    background-color: #fff;
+    .header {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color:#17181b;
+        font-weight: 600;
+        position: relative;
+        letter-spacing: -0.03em;
+        .btn_closed {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            border: 0 solid #000;
+            background-color: transparent;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 300;
+            &:hover {
+                background:rgba(0, 0, 0, 0.06);
+            }
+            svg {
+                color:gray;
+                width: 12px;
+                height: 12px;
+                border: 1px;
+                stroke-width: 1px;
+            }
+            position: absolute;
+            right: -15px;
+            top:40%;
+            transform: translateY(-50%);
+        }
+    }
+    .txt {
+        margin-top: 10px;
+        font-size: 14px;
+        color:#17181b;
+        line-height: 21px;
+        margin-bottom: 40px;
+    }
+    a {
+        display: flex;
+        width: 100%;
+        border: 2px solid #5f87c8;
+        font-size: 16px;
+        font-weight: 500;
+        color:#17181b;
+        padding:16px 0 16px 96px;
+        border-radius: 8px;
+        box-sizing: border-box;
+        background: #fff url(../img/walletconnect-logo.png) no-repeat right 96px top 50% / 25px 20px;
+        &:hover {
+            background-color: #EDF2F7;
+        }
+        & + a {
+            margin-top: 15px;
+            background: #fff url(../img/coinbase-wallet.png) no-repeat right 96px top 50% / 25px;
+        }
+    }
+}
 @media screen and (min-width:768px) and (max-width: 1279px) {
     main {
         nav {
@@ -724,5 +910,77 @@ main {
     body.active {
         height: 100vh;
         overflow: hidden;
+    }
+    .overay_wrap {
+        &.on {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+    }
+    .members_pop {
+        width: calc(100% - 20px);
+        max-height: calc(100% - 7.5em);
+        position: relative;
+        left: auto;
+        top:auto;
+        margin: 0 auto;
+        transform: translate(0,0);
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        .header {
+            flex: 0 1 0%;
+            padding:16px 40px;
+            font-size: 18px;
+        }
+        .members_list {
+            flex: 1 1 0%;
+            li {
+                .btn_follow {
+                    width: 90px;
+                    padding:0 5%;
+                }
+                .user_name {
+                    padding:0 16px;
+                    font-size: 14px;
+                    color:#17181b
+                }
+            }
+        }
+    }
+    .sign_pop {
+        max-width: 500px;
+        width: 100%;
+        border-radius: 6px;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        overflow: hidden;
+        padding:40px;
+        background-color: #fff;
+        box-sizing: border-box;
+        
+        a {
+            display: flex;
+            width: 100%;
+            border: 2px solid #5f87c8;
+            font-size: 16px;
+            font-weight: 500;
+            color:#17181b;
+            padding:16px 0 16px 16px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            background: #fff url(../img/walletconnect-logo.png) no-repeat right 20px top 50% / 25px 20px;
+            &:hover {
+                background-color: #EDF2F7;
+            }
+            & + a {
+                margin-top: 15px;
+                background: #fff url(../img/coinbase-wallet.png) no-repeat right 20px top 50% / 25px;
+            }
+        }
     }
 }

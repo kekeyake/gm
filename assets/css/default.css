@@ -59,6 +59,18 @@ table {
   border-spacing: 0;
 }
 
+svg {
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.css-mrnj3w {
+  height: 1.25rem;
+  width: 1.25rem;
+  color: #9ca3af;
+  fill: none;
+}
+
 a {
   text-decoration: none;
 }

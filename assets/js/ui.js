@@ -28,6 +28,8 @@ function removeSearchLayer() {
 
   function closePop(e) {
     $(e).closest('.overay_wrap').removeClass('on');
+    $('html').css('height', 'auto');
+    $('html').css('overflow-y', 'auto');
   }
 
   function popOpen(o){

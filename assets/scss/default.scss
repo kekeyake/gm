@@ -1107,6 +1107,124 @@ main {
         }
     }
 }
+.qr_pop {
+    width: 480px;
+    border-radius: 6px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    padding-top:40px;
+    box-sizing: border-box;
+    //background: var(--layerbg);
+    background: #ffd900;
+    .header {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: var(--color);
+        font-weight: 600;
+        position: relative;
+        letter-spacing: -0.03em;
+        .tit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            font-size: 16px;
+            img {
+                width: 40px;
+                margin-right: 10px;
+            }
+        }
+        .btn_closed {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            border: 0 solid #000;
+            background-color: transparent;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 300;
+            &:hover {
+                background:var(--btnclosed);
+            }
+            svg {
+                color:gray;
+                width: 12px;
+                height: 12px;
+                border: 1px;
+                stroke-width: 1px;
+            }
+            position: absolute;
+            right: 15px;
+            top:40%;
+            transform: translateY(-50%);
+        }
+    }
+    .qr_box {
+        padding:30px;
+        text-align: center;
+        div {
+            display: inline-block;
+            background: #fff;;
+            margin-bottom: 12px;
+            img {
+                padding:10px;
+                width: 175px;
+            }
+        }
+        .count_txt {
+            font-size: 12px;
+            color:#999;
+            margin-bottom: 16px;
+            span {
+                color:#e66d16;
+            }
+        }
+        .txt {
+            max-width: 200px;
+            margin:0 auto;
+            font-size: 12px;
+            color: #666;
+            line-height: 1.86;
+        }
+    }
+    .step_box {
+        background-color: #fff;
+        margin:0;
+        text-align: center;
+        padding:30px 0;
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li {
+                display: block;
+                padding-right: 18px;
+                background: url(../img/ic-pointer-right-bk.svg) no-repeat right 0 top 10px / 18px 17px;
+                &:last-child {
+                    padding-right: 0;
+                    background: none;
+                }
+                span {
+                    display: block;
+                    margin-top: 10px;
+                    font-size: 12px;
+                    font-weight: 700;
+                }
+            }
+        }
+        p {
+            font-size: 12px;
+            color: #666;
+            margin-top: 25px;
+        }
+    }
+}
 @media screen and (min-width:768px) and (max-width: 1279px) {
     main {
         nav {
@@ -1696,4 +1814,43 @@ main {
             }
         }
     }
+    .qr_pop {
+    max-width: 480px;
+    width: 100%;
+    padding:30px 20px;
+    
+    //background: var(--layerbg);
+    background: #ffd900;
+    .header {
+        .tit {
+            width: 100%;
+        }
+        .btn_closed {
+            right: 0;
+        }
+    }
+    .step_box {
+        padding:30px 0;
+        ul {
+            li {
+                display: block;
+                padding-right: 10px;
+                background: url(../img/ic-pointer-right-bk.svg) no-repeat right 0 top 10px / 18px 17px;
+                &:last-child {
+                    padding-right: 0;
+                    background: none;
+                }
+                span {
+                    display: block;
+                    margin-top: 10px;
+                    font-size: 11px;
+                    letter-spacing: -0.05em;
+                }
+            }
+        }
+        p {
+            line-height: 1.8;
+        }
+    }
+}
 }

@@ -80,6 +80,10 @@ table {
   --btnbg:#fff;
   --btnbghover:#E2E8F0;
   --navbg:#fff;
+  --sort:#f1f2f3;
+  --timeSelect:#cbd5e0;
+  --selectBox:#e0e2e5;
+  --selectBoxBg:#fff;
 }
 
 :root[color-theme='dark'] {
@@ -103,6 +107,10 @@ table {
   --btnbg:transparent;
   --btnbghover:#27384b;
   --navbg:#2D3748;
+  --sort:#33363D;
+  --timeSelect:#33363D;
+  --selectBox:#33363d;
+  --selectBoxBg:#2d3748;
 }
 
 html {
@@ -153,6 +161,7 @@ header {
   top: 0;
   width: 100%;
   background-color: var(--background);
+  z-index: 10;
 }
 
 header .top_wrap {
@@ -664,6 +673,116 @@ main .content_wrap .content_box .cont_btm .up_down button i {
 
 main .content_wrap .content_box .cont_btm .up_down b {
   color: var(--color);
+}
+
+main .content_wrap .sort_wrap {
+  padding: 20px 16px;
+  border-bottom: 1px solid var(--bdcolor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .content_wrap .sort_wrap .pc_btn button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 0 solid #000;
+  background: transparent;
+  color: var(--color);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+main .content_wrap .sort_wrap .pc_btn button i {
+  display: none;
+  margin-right: 10px;
+}
+
+main .content_wrap .sort_wrap .pc_btn button.on {
+  background-color: var(--sort);
+  font-weight: 600;
+}
+
+main .content_wrap .sort_wrap .pc_btn button.on i {
+  display: inline-block;
+}
+
+main .content_wrap .sort_wrap .sort_btn {
+  margin-left: auto;
+  position: relative;
+}
+
+main .content_wrap .sort_wrap .sort_btn .time_select {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 0 solid #000;
+  background: transparent;
+  color: var(--color);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+main .content_wrap .sort_wrap .sort_btn .time_select span {
+  margin-right: 10px;
+}
+
+main .content_wrap .sort_wrap .sort_btn .time_select:hover {
+  background-color: var(--sort);
+}
+
+main .content_wrap .sort_wrap .sort_btn .time_select + .select_box {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 40px;
+  padding: 8px 0;
+  border: 1px solid var(--selectBox);
+  background: var(--selectBoxBg);
+  border-radius: 6px;
+  width: 224px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 10px 1px;
+          box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 10px 1px;
+}
+
+@media screen and (max-width: 1080px) {
+  main .content_wrap .sort_wrap .sort_btn .time_select + .select_box {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main .content_wrap .sort_wrap .sort_btn .time_select + .select_box {
+    left: 0;
+  }
+}
+
+main .content_wrap .sort_wrap .sort_btn .time_select + .select_box button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border: 0 solid #000;
+  padding: 6px 13px;
+  font-size: 16px;
+  line-height: 24px;
+  background: #fff;
+  color: var(--color);
+  cursor: pointer;
+}
+
+main .content_wrap .sort_wrap .sort_btn .time_select + .select_box button:hover, main .content_wrap .sort_wrap .sort_btn .time_select + .select_box button:active {
+  background-color: var(--sort);
+}
+
+main .content_wrap .sort_wrap .sort_btn .time_select.on {
+  background-color: var(--timeSelect);
+}
+
+main .content_wrap .sort_wrap .sort_btn .time_select.on + .select_box {
+  display: block;
 }
 
 main .right_contents {

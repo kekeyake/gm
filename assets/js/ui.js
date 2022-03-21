@@ -61,7 +61,11 @@ if (document.querySelectorAll('.overay_wrap').length > 0 ) {
   });
 }
 
-
+//
+function toggleSort() {
+  var element = document.getElementById("timeSelect");
+  element.classList.toggle("on");
+}
 
 
 // dark mode 

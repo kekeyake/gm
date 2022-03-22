@@ -84,6 +84,7 @@ table {
   --timeSelect:#cbd5e0;
   --selectBox:#e0e2e5;
   --selectBoxBg:#fff;
+  --selectBtn:#f1f2f3;
 }
 
 :root[color-theme='dark'] {
@@ -111,6 +112,7 @@ table {
   --timeSelect:#33363D;
   --selectBox:#33363d;
   --selectBoxBg:#2d3748;
+  --selectBtn:rgba(255,255,255,.1);
 }
 
 html {
@@ -447,6 +449,13 @@ main .left_contents nav li:last-child label input:checked + span {
 }
 
 main .content_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 608px;
   border-right: 1px solid var(--bdcolor);
   border-left: 1px solid var(--bdcolor);
@@ -710,11 +719,18 @@ main .content_wrap .sort_wrap .pc_btn button.on i {
   display: inline-block;
 }
 
+main .content_wrap .sort_wrap .m_btn {
+  display: none;
+  margin-right: 10px;
+}
+
+main .content_wrap .sort_wrap .m_btn,
 main .content_wrap .sort_wrap .sort_btn {
   margin-left: auto;
   position: relative;
 }
 
+main .content_wrap .sort_wrap .m_btn .time_select,
 main .content_wrap .sort_wrap .sort_btn .time_select {
   padding: 8px 16px;
   font-size: 16px;
@@ -725,14 +741,17 @@ main .content_wrap .sort_wrap .sort_btn .time_select {
   cursor: pointer;
 }
 
+main .content_wrap .sort_wrap .m_btn .time_select span,
 main .content_wrap .sort_wrap .sort_btn .time_select span {
   margin-right: 10px;
 }
 
+main .content_wrap .sort_wrap .m_btn .time_select:hover,
 main .content_wrap .sort_wrap .sort_btn .time_select:hover {
   background-color: var(--sort);
 }
 
+main .content_wrap .sort_wrap .m_btn .time_select + .select_box,
 main .content_wrap .sort_wrap .sort_btn .time_select + .select_box {
   display: none;
   position: absolute;
@@ -748,17 +767,20 @@ main .content_wrap .sort_wrap .sort_btn .time_select + .select_box {
 }
 
 @media screen and (max-width: 1080px) {
+  main .content_wrap .sort_wrap .m_btn .time_select + .select_box,
   main .content_wrap .sort_wrap .sort_btn .time_select + .select_box {
     right: 0;
   }
 }
 
 @media screen and (max-width: 767px) {
+  main .content_wrap .sort_wrap .m_btn .time_select + .select_box,
   main .content_wrap .sort_wrap .sort_btn .time_select + .select_box {
     left: 0;
   }
 }
 
+main .content_wrap .sort_wrap .m_btn .time_select + .select_box button,
 main .content_wrap .sort_wrap .sort_btn .time_select + .select_box button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -768,21 +790,41 @@ main .content_wrap .sort_wrap .sort_btn .time_select + .select_box button {
   padding: 6px 13px;
   font-size: 16px;
   line-height: 24px;
-  background: #fff;
+  background: transparent;
   color: var(--color);
   cursor: pointer;
 }
 
-main .content_wrap .sort_wrap .sort_btn .time_select + .select_box button:hover, main .content_wrap .sort_wrap .sort_btn .time_select + .select_box button:active {
-  background-color: var(--sort);
+main .content_wrap .sort_wrap .m_btn .time_select + .select_box button:hover, main .content_wrap .sort_wrap .m_btn .time_select + .select_box button:active,
+main .content_wrap .sort_wrap .sort_btn .time_select + .select_box button:hover,
+main .content_wrap .sort_wrap .sort_btn .time_select + .select_box button:active {
+  background-color: var(--selectBtn);
 }
 
+main .content_wrap .sort_wrap .m_btn .time_select.on,
 main .content_wrap .sort_wrap .sort_btn .time_select.on {
   background-color: var(--timeSelect);
 }
 
+main .content_wrap .sort_wrap .m_btn .time_select.on + .select_box,
 main .content_wrap .sort_wrap .sort_btn .time_select.on + .select_box {
   display: block;
+}
+
+@media screen and (max-width: 767px) {
+  main .content_wrap .sort_wrap {
+    padding: 10px 8px;
+  }
+  main .content_wrap .sort_wrap .m_btn,
+  main .content_wrap .sort_wrap .sort_btn {
+    margin-left: 0;
+  }
+  main .content_wrap .pc_btn {
+    display: none;
+  }
+  main .content_wrap .m_btn {
+    display: block !important;
+  }
 }
 
 main .right_contents {
@@ -1992,6 +2034,21 @@ main .right_contents .sns_list svg {
   }
   main .content_wrap {
     width: 100%;
+  }
+  main .content_wrap .create_wrap {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  main .content_wrap .sort_wrap {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  main .content_wrap .content_box {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
   .top_wrap {
     -webkit-box-pack: justify;

@@ -68,6 +68,44 @@ function toggleSort() {
 }
 
 
+function toggleMenu() {
+  var element = document.getElementById("menuSelect");
+  element.classList.toggle("on");
+}
+
+function modifyText(e) {
+  let selectTime = document.getElementById('selectTime');
+  selectTime.firstChild.nodeValue = e;
+}
+function modifyText2(e) {
+  let selectTime = document.getElementById('menuText');
+  selectTime.firstChild.nodeValue = e;
+}
+
+let selectBtns = document.querySelectorAll('.sort_btn > .select_box > button');
+
+for (const selectBtn of selectBtns) {
+  selectBtn.addEventListener('click', function() {
+    let textValue = this.firstChild.nodeValue;
+    this.classList.add('on');
+    modifyText(textValue);
+    toggleSort();
+  });
+}
+
+let menuBtns = document.querySelectorAll('.m_btn > .select_box > button');
+
+for (const menuBtn of menuBtns) {
+  menuBtn.addEventListener('click', function() {
+    let textValue = this.firstChild.nodeValue;
+    this.classList.add('on');
+    modifyText2(textValue);
+    toggleMenu();
+  });
+}
+
+
+
 // dark mode 
 document.documentElement.setAttribute('color-theme', 'light'); // default light
 const $checkbox = document.querySelector('.dark-mode-check');

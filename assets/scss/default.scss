@@ -32,6 +32,8 @@
     --timeSelect:#cbd5e0;
     --selectBox:#e0e2e5;
     --selectBoxBg:#fff;
+    --selectBtn:#f1f2f3;
+    
 }
 
 :root[color-theme='dark'] {
@@ -59,6 +61,7 @@
     --timeSelect:#33363D;
     --selectBox:#33363d;
     --selectBoxBg:#2d3748;
+    --selectBtn:rgba(255,255,255,.1);
 }
 
 html {
@@ -297,6 +300,8 @@ main {
         }
     }
     .content_wrap {
+        display: flex;
+        flex-direction: column;
         width: 608px;
         border-right: 1px solid var(--bdcolor);
         border-left: 1px solid var(--bdcolor);
@@ -495,7 +500,11 @@ main {
                     }
                 }
             }
-            
+            .m_btn {
+                display: none;
+                margin-right: 10px;
+            }
+            .m_btn,
             .sort_btn {
                 margin-left: auto;
                 position: relative;
@@ -538,12 +547,12 @@ main {
                             padding:6px 13px;
                             font-size: 16px;
                             line-height: 24px;
-                            background: #fff;
+                            background: transparent;
                             color: var(--color);
                             cursor: pointer;
                             &:hover,
                             &:active {
-                                background-color: var(--sort);
+                                background-color: var(--selectBtn);
                             }
                             
                         }
@@ -555,6 +564,21 @@ main {
                         display: block;
                     }
                 }
+            }
+        }
+        @media screen and (max-width:767px){ 
+            .sort_wrap {
+                padding:10px 8px;
+                .m_btn,
+                .sort_btn {
+                    margin-left: 0;
+                }
+            }
+            .pc_btn {
+                display: none;
+            }
+            .m_btn {
+                display: block !important;
             }
         }
     }
@@ -1454,6 +1478,15 @@ main {
         }
         .content_wrap {
             width: 100%;
+            .create_wrap {
+                order:2;
+            }
+            .sort_wrap {
+                order:1;
+            }
+            .content_box {
+                order:3;
+            }
         }
     }
     .top_wrap {

@@ -92,6 +92,11 @@ table {
   --btnbg:#fff;
   --btnbghover:#E2E8F0;
   --navbg:#fff;
+  --sort:#f1f2f3;
+  --timeSelect:#cbd5e0;
+  --selectBox:#e0e2e5;
+  --selectBoxBg:#fff;
+  --selectBtn:#f1f2f3;
 }
 
 :root[color-theme='dark'] {
@@ -115,6 +120,11 @@ table {
   --btnbg:transparent;
   --btnbghover:#27384b;
   --navbg:#2D3748;
+  --sort:#33363D;
+  --timeSelect:#33363D;
+  --selectBox:#33363d;
+  --selectBoxBg:#2d3748;
+  --selectBtn:rgba(255,255,255,.1);
 }
 
 html {
@@ -165,6 +175,7 @@ header {
   top: 0;
   width: 100%;
   background-color: var(--background);
+  z-index: 10;
 }
 
 header .top_wrap {
@@ -449,6 +460,13 @@ main .left_contents nav .menu_list li a:hover {
 }
 
 main .content_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 608px;
   border-right: 1px solid var(--bdcolor);
   border-left: 1px solid var(--bdcolor);
@@ -2364,6 +2382,21 @@ main .right_contents .sns_list svg {
   }
   main .content_wrap {
     width: 100%;
+  }
+  main .content_wrap .create_wrap {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  main .content_wrap .sort_wrap {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  main .content_wrap .content_box {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
   .top_wrap {
     -webkit-box-pack: justify;

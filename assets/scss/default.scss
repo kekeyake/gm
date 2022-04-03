@@ -28,6 +28,12 @@
     --btnbg:#fff;
     --btnbghover:#E2E8F0;
     --navbg:#fff;
+    --sort:#f1f2f3;
+    --timeSelect:#cbd5e0;
+    --selectBox:#e0e2e5;
+    --selectBoxBg:#fff;
+    --selectBtn:#f1f2f3;
+    
 }
 
 :root[color-theme='dark'] {
@@ -51,6 +57,11 @@
     --btnbg:transparent;
     --btnbghover:#27384b;
     --navbg:#2D3748;
+    --sort:#33363D;
+    --timeSelect:#33363D;
+    --selectBox:#33363d;
+    --selectBoxBg:#2d3748;
+    --selectBtn:rgba(255,255,255,.1);
 }
 
 html {
@@ -92,6 +103,7 @@ header {
     top:0;
     width: 100%;
     background-color: var(--background);
+    z-index: 10;
     .top_wrap {
         height: 72px;
         display: flex;
@@ -285,6 +297,8 @@ main {
         }
     }
     .content_wrap {
+        display: flex;
+        flex-direction: column;
         width: 608px;
         border-right: 1px solid var(--bdcolor);
         border-left: 1px solid var(--bdcolor);
@@ -1563,7 +1577,7 @@ main {
             width: 288px;
         }
         .content_wrap {
-            width: 608px;
+            width: 608px;            
         }
         .center_contents {
             flex-grow: 1;
@@ -1687,6 +1701,15 @@ main {
         }
         .content_wrap {
             width: 100%;
+            .create_wrap {
+                order:2;
+            }
+            .sort_wrap {
+                order:1;
+            }
+            .content_box {
+                order:3;
+            }
         }
     }
     .top_wrap {

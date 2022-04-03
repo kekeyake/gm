@@ -66,15 +66,33 @@ if (document.querySelectorAll('.overay_wrap').length > 0 ) {
 
 // dark mode 
 document.documentElement.setAttribute('color-theme', 'light'); // default light
-const $checkbox = document.querySelector('.dark-mode-check');
 
-$checkbox.addEventListener('click', e => {
-  if (e.target.checked) {
-    document.documentElement.setAttribute('color-theme', 'dark');
-    e.target.closest('label').classList.add('dark-mode');
-  } else {
-    document.documentElement.setAttribute('color-theme', 'light');
-    e.target.closest('label').classList.remove('dark-mode');
-  }
+if (document.querySelectorAll('.dark-mode-check').length > 0) {
+  const $checkbox = document.querySelector('.dark-mode-check');
 
+  $checkbox.addEventListener('click', e => {
+    if (e.target.checked) {
+      document.documentElement.setAttribute('color-theme', 'dark');
+      e.target.closest('label').classList.add('dark-mode');
+    } else {
+      document.documentElement.setAttribute('color-theme', 'light');
+      e.target.closest('label').classList.remove('dark-mode');
+    }
+
+  });
+}
+
+let $optionBox = document.querySelector('.option_box');
+let $btnTab = document.querySelector('.btn_tab');
+$btnTab.addEventListener('click', function() {
+  $btnTab.classList.add('on');
+  this.nextElementSibling.classList.remove('on');
+  $optionBox.classList.remove('on');
+});
+
+let $btnTab2 = document.querySelector('.btn_tab2');
+$btnTab2.addEventListener('click', function () {
+  $btnTab2.classList.add('on');
+  this.previousElementSibling.classList.remove('on');
+  $optionBox.classList.add('on');
 });

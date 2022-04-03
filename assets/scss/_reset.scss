@@ -46,3 +46,13 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+.select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+            appearance: none;
+}
+
+/* IE 에서 Select box 화살표 제거 */ 
+.select::-ms-expand { 
+    display: none; 
+}

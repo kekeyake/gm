@@ -1300,6 +1300,353 @@ main .content_wrap .sort_wrap .sort_btn .time_select.on + .select_box {
   display: block;
 }
 
+main .content_wrap .post_setting_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
+  font-size: 16px;
+}
+
+main .content_wrap .post_setting_wrap .select {
+  padding: 5px 30px 5px 9px;
+  background: url(../img/ico_select.png) no-repeat right 5px top 50%/18px;
+  border: 1px solid var(--bdcolor);
+  font-size: 16px;
+  width: 100%;
+}
+
+main .content_wrap .post_setting_wrap input[type="text"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid var(--bdcolor);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main .content_wrap .post_setting_wrap input[type="radio"] {
+  display: none;
+}
+
+main .content_wrap .post_setting_wrap input[type="radio"] + label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+  width: 46%;
+  height: 24px;
+  border: 1px solid var(--bdcolor);
+  background-color: #fff;
+  margin-right: 0;
+}
+
+main .content_wrap .post_setting_wrap input[type="radio"]:checked + label {
+  background-color: #d5f4ef;
+}
+
+main .content_wrap .post_setting_wrap .add_post_list {
+  width: 212px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid var(--bdcolor);
+  position: relative;
+  padding: 0 10px 10px;
+}
+
+main .content_wrap .post_setting_wrap .add_post_list .list_box .t1 {
+  padding: 10px;
+}
+
+main .content_wrap .post_setting_wrap .add_post_list .list_box ul {
+  border-top: 1px solid var(--bdcolor);
+  padding: 10px 0;
+  max-height: 198px;
+  overflow-y: auto;
+}
+
+main .content_wrap .post_setting_wrap .add_post_list .list_box ul li {
+  padding: 10px;
+}
+
+main .content_wrap .post_setting_wrap .add_post_list .option_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 0 10px;
+  left: 0;
+  bottom: -40px;
+  position: absolute;
+}
+
+main .content_wrap .post_setting_wrap .add_post_list .option_btn button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0 solid #000;
+  background: transparent;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+main .content_wrap .post_setting_wrap .add_post_list .option_btn .btn_add_list {
+  margin-left: auto;
+}
+
+main .content_wrap .post_setting_wrap .setting_box {
+  width: 336px;
+}
+
+main .content_wrap .post_setting_wrap .setting_box .form_wrap {
+  border: 1px solid var(--bdcolor);
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+main .content_wrap .post_setting_wrap .setting_box .form_wrap .form_box {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .content_wrap .post_setting_wrap .setting_box .form_wrap .form_box + .form_box {
+  border-top: 1px solid var(--bdcolor);
+}
+
+main .content_wrap .post_setting_wrap .setting_box .form_wrap .form_box b {
+  font-weight: 400;
+  width: 93px;
+}
+
+main .content_wrap .post_setting_wrap .setting_box .form_wrap .form_box div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .content_wrap .post_setting_wrap .btn_wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 70px 0 35px;
+  border-top: 1px solid var(--bdcolor);
+  padding-top: 20px;
+}
+
+main .content_wrap .post_setting_wrap .btn_wrap button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 123px;
+  height: 43px;
+  border-radius: 8px;
+  border: 0 solid #000;
+  color: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+main .content_wrap .post_setting_wrap .btn_wrap button.btn_submit {
+  background-color: #de4d42;
+}
+
+main .content_wrap .post_setting_wrap .btn_wrap button.btn_cancel {
+  background-color: #00394d;
+}
+
+main .content_wrap .community_setting_wrap {
+  padding: 10px;
+}
+
+main .content_wrap .community_setting_wrap .form_box .tit {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 18px;
+  margin-bottom: 5px;
+}
+
+main .content_wrap .community_setting_wrap .form_box input[type="text"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 360px;
+  padding: 10px;
+  border: 1px solid var(--bdcolor);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main .content_wrap .community_setting_wrap .form_box textarea {
+  width: 360px;
+  height: 85px;
+  padding: 10px;
+  border: 1px solid var(--bdcolor);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: none;
+  overflow-y: auto;
+}
+
+main .content_wrap .community_setting_wrap .form_box .img_box {
+  width: 360px;
+  position: relative;
+  border-right: 1px solid var(--bdcolor);
+  background: url(../img/bg_pattern.gif) repeat 0 0;
+}
+
+main .content_wrap .community_setting_wrap .form_box .img_box.__bg {
+  min-height: 72px;
+}
+
+main .content_wrap .community_setting_wrap .form_box .img_box.__icon {
+  width: 61px;
+  min-height: 62px;
+}
+
+main .content_wrap .community_setting_wrap .form_box .img_box .btn_photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 0 solid #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+main .content_wrap .community_setting_wrap .form_box > div ul {
+  width: 360px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid var(--bdcolor);
+}
+
+main .content_wrap .community_setting_wrap .form_box > div ul li {
+  padding: 10px;
+}
+
+main .content_wrap .community_setting_wrap .form_box > div button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 116px;
+  height: 24px;
+  border: 1px solid var(--bdcolor);
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+main .content_wrap .community_setting_wrap .form_box > div button.btn_add_admin {
+  background-color: #84ccc9;
+  margin-right: 20px;
+}
+
+main .content_wrap .community_setting_wrap .form_box > div button.btn_del_admin {
+  background-color: #fff;
+}
+
+main .content_wrap .community_setting_wrap .btn_wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 35px 0;
+  border-top: 1px solid var(--bdcolor);
+  padding-top: 20px;
+}
+
+main .content_wrap .community_setting_wrap .btn_wrap button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 123px;
+  height: 43px;
+  border-radius: 8px;
+  border: 0 solid #000;
+  color: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+main .content_wrap .community_setting_wrap .btn_wrap button.btn_submit {
+  background-color: #de4d42;
+}
+
+main .content_wrap .community_setting_wrap .btn_wrap button.btn_cancel {
+  background-color: #00394d;
+}
+
 @media screen and (max-width: 767px) {
   main .content_wrap .sort_wrap {
     padding: 10px 8px;
@@ -1313,6 +1660,27 @@ main .content_wrap .sort_wrap .sort_btn .time_select.on + .select_box {
   }
   main .content_wrap .m_btn {
     display: block !important;
+  }
+  main .content_wrap .post_setting_wrap .add_post_list {
+    width: 100%;
+  }
+  main .content_wrap .post_setting_wrap .setting_box {
+    margin-top: 70px;
+    width: 100%;
+  }
+  main .content_wrap .community_setting_wrap .form_box input[type="text"] {
+    width: 100%;
+  }
+  main .content_wrap .community_setting_wrap .form_box textarea {
+    width: 100%;
+  }
+  main .content_wrap .community_setting_wrap .form_box .img_box {
+    width: 100%;
+  }
+  main .content_wrap .community_setting_wrap .form_box > div ul {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 }
 

@@ -124,17 +124,42 @@ if (document.querySelectorAll('.dark-mode-check').length > 0) {
   });
 }
 
-let $optionBox = document.querySelector('.option_box');
-let $btnTab = document.querySelector('.btn_tab');
-$btnTab.addEventListener('click', function() {
-  $btnTab.classList.add('on');
-  this.nextElementSibling.classList.remove('on');
-  $optionBox.classList.remove('on');
-});
+// 0516 수정 
+if (document.querySelectorAll('.tn_tab').length > 0) { 
+  let $optionBox = document.querySelector('.option_box');
+  let $btnTab = document.querySelector('.btn_tab');
+  $btnTab.addEventListener('click', function() {
+    $btnTab.classList.add('on');
+    this.nextElementSibling.classList.remove('on');
+    $optionBox.classList.remove('on');
+  });
+}
+if (document.querySelectorAll('.btn_tab2').length > 0) { 
+  let $btnTab2 = document.querySelector('.btn_tab2');
+  $btnTab2.addEventListener('click', function () {
+    $btnTab2.classList.add('on');
+    this.previousElementSibling.classList.remove('on');
+    $optionBox.classList.add('on');
+  });
+}
 
-let $btnTab2 = document.querySelector('.btn_tab2');
-$btnTab2.addEventListener('click', function () {
-  $btnTab2.classList.add('on');
-  this.previousElementSibling.classList.remove('on');
-  $optionBox.classList.add('on');
-});
+
+function selectLink(e) {
+  e.classList.toggle('on');
+}
+
+
+let userSelects = document.querySelectorAll(".select_box a");
+for (const userSelect of userSelects) {
+  userSelect.addEventListener('click' ,function(){
+    let tgParent = document.getElementById('userBtn');
+    tgParent.classList.remove('on');
+  });
+}
+
+let faqItems = document.querySelectorAll(".about-faq__q");
+for (const faqItem of faqItems) {
+  faqItem.addEventListener('click' ,function(){
+    this.classList.toggle('on');
+  });
+}

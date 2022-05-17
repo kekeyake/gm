@@ -125,7 +125,7 @@ if (document.querySelectorAll('.dark-mode-check').length > 0) {
 }
 
 // 0516 수정 
-if (document.querySelectorAll('.tn_tab').length > 0) { 
+if (document.querySelectorAll('.btn_tab').length > 0) { 
   let $optionBox = document.querySelector('.option_box');
   let $btnTab = document.querySelector('.btn_tab');
   $btnTab.addEventListener('click', function() {
@@ -161,5 +161,33 @@ let faqItems = document.querySelectorAll(".about-faq__q");
 for (const faqItem of faqItems) {
   faqItem.addEventListener('click' ,function(){
     this.classList.toggle('on');
+  });
+}
+
+let aboutItems = document.querySelectorAll(".about-rules__q");
+for (const aboutItem of aboutItems) {
+  aboutItem.addEventListener('click' ,function(){
+    this.classList.toggle('on');
+  });
+}
+
+function optionMenu() {
+  var element = document.getElementById("optionSelect");
+  element.classList.toggle("on");
+}
+function optionText(elf,elc) {
+  let selectTime = document.getElementById('optionText');
+  selectTime.firstChild.innerHTML = elf;
+  selectTime.childNodes[1].innerHTML = elc;
+}
+let optBtns = document.querySelectorAll('.opt_btn > .select_box > button');
+
+for (const optBtn of optBtns) {
+  optBtn.addEventListener('click', function() {
+    let emojiValue = this.childNodes[0].innerText;
+    let textValue = this.childNodes[1].innerText;    
+    this.classList.add('on');
+    optionText(emojiValue,textValue);
+    optionMenu();
   });
 }

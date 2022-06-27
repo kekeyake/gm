@@ -598,10 +598,29 @@ main .content_wrap .content_box .cont_top {
   margin-bottom: 20px;
 }
 
+main .content_wrap .content_box .cont_top.dao {
+  margin-bottom: 0;
+}
+
+main .content_wrap .content_box .cont_top.dao .btn-share {
+  display: block;
+  border: 0 solid #000;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+main .content_wrap .content_box .cont_top.dao .btn-share img {
+  width: 100%;
+}
+
 main .content_wrap .content_box .cont_top .inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 
 main .content_wrap .content_box .cont_top .inner .user_img {
@@ -1995,6 +2014,349 @@ main .right_contents .sns_list svg {
   fill: #4c79c5;
 }
 
+.dao_list_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 35px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dao_list_top.complete {
+  margin-bottom: 0;
+}
+
+.dao_list_top > img {
+  margin-right: 5px;
+}
+
+.dao_list_top p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.dao_list_top .dao_list_time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: auto;
+}
+
+.dao_list_top .dao_list_time span {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  min-width: 50px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.dao_list_cont {
+  display: block !important;
+}
+
+.dao_list_cont img {
+  float: left;
+  margin-right: 27px;
+  margin-bottom: 15px;
+}
+
+.dao_list_cont p {
+  line-height: 28px;
+  font-size: 16px;
+  word-break: keep-all;
+  margin-bottom: 26px;
+}
+
+.dao_list_cont::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.dao_list_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dao_list_btn > div {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dao_list_btn > div b {
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.dao_list_btn > div .vote {
+  padding: 5px 10px;
+  border-radius: 12px;
+  background-color: #f0f0f0;
+}
+
+.dao_list_btn > div .vote.win {
+  background-color: #f05371;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.dao_list_btn > div .vote.win + b {
+  color: #f05371;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.dao_list_complete {
+  display: block !important;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.dao_list_complete p {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.dao_list_vote {
+  display: block !important;
+  margin-bottom: 30px;
+}
+
+.dao_list_vote .vote_box {
+  width: 100%;
+  height: 281px;
+  position: relative;
+  background: url(../img/dao_vote_bg.png) no-repeat 0 0/cover;
+}
+
+.dao_list_vote .vote_box .win {
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+.dao_list_vote .vote_box .end {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 19px;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dao_list_vote .vote_box button {
+  position: absolute;
+  bottom: 30px;
+  border: 0 solid #000;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  left: 34px;
+  cursor: pointer;
+}
+
+.dao_list_vote .vote_box button + button {
+  left: 322px;
+}
+
+.dao_list_vote .vote_box .vs {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 90px;
+}
+
+.dao_list_vote .vote_box .vote_vs {
+  height: 46px;
+  width: 503px;
+  border: 1px solid #fff;
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  -webkit-transform: translateX(-50%) skew(-20deg);
+          transform: translateX(-50%) skew(-20deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dao_list_vote .vote_box .vote_vs div {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dao_list_vote .vote_box .vote_vs div span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  background-color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  -webkit-transform: skew(0deg);
+          transform: skew(0deg);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.dao_list_vote .vote_box .vote_vs div span i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-style: normal;
+  -webkit-transform: translate(-50%, -50%) skew(20deg);
+          transform: translate(-50%, -50%) skew(20deg);
+}
+
+.dao_list_vote .vote_box .vote_vs div.like {
+  background-color: #7b2bfe;
+}
+
+.dao_list_vote .vote_box .vote_vs div.like span {
+  color: #7b2bfe;
+}
+
+.dao_list_vote .vote_box .vote_vs div.hate {
+  background-color: #fdb525;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.dao_list_vote .vote_box .vote_vs div.hate span {
+  color: #fdb525;
+}
+
+.dao_list_vote ul {
+  background-color: #f0f0f0;
+  padding: 30px 27px;
+}
+
+.dao_list_vote ul li {
+  color: #555;
+  font-size: 15px;
+  padding-left: 15px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.dao_list_vote ul li::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: #555;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.dao_list_vote ul li:last-child {
+  margin-bottom: 0;
+}
+
+.dao_list_vote .reward {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px;
+  border-bottom: 1px solid #dedede;
+}
+
+.dao_list_vote .reward .reward_box {
+  text-align: center;
+}
+
+.dao_list_vote .reward .reward_box div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  color: #fff;
+  margin: 0 auto 10px;
+}
+
+.dao_list_vote .reward .reward_box div b {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.dao_list_vote .reward .reward_box div span {
+  font-size: 14px;
+}
+
+.dao_list_vote .reward .reward_box.writer div {
+  background-color: #ff5a5a;
+}
+
+.dao_list_vote .reward .reward_box.top div {
+  background-color: #3ec7b2;
+}
+
+.dao_list_vote .reward .reward_box.my div {
+  background-color: #8d8fe3;
+}
+
+.dao_list_vote .reward .reward_box p {
+  font-size: 14px;
+}
+
 .search_wrap_mobile {
   display: none;
 }
@@ -2862,6 +3224,110 @@ main .right_contents .sns_list svg {
   margin-top: 25px;
 }
 
+.vote_pop {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 514px;
+  height: 485px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.vote_pop .tit {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.vote_pop .btn_closed {
+  background: transparent;
+  border: 0 solid #000;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.vote_pop .btnLike {
+  background: transparent;
+  border: 0 solid #000;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.vote_pop .vote_box {
+  margin-top: 30px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  color: #17181b;
+}
+
+.vote_pop .vote_box ul {
+  margin: 15px auto 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 25px;
+}
+
+.vote_pop .vote_box ul li {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #000;
+  border: 2px solid #d8d8d8;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.vote_pop .vote_box ul.like li.on {
+  border-color: #4833b6;
+  background-color: #634ed1;
+  color: #fff;
+}
+
+.vote_pop .vote_box ul.hate li.on {
+  border-color: #c46c0f;
+  background-color: #e8943b;
+  color: #fff;
+}
+
+.vote_pop .vote_box .t1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.vote_pop .vote_box .t2 {
+  margin-top: 20px;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.vote_pop .vote_box .t3 {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   main nav {
     width: 288px;
@@ -3628,6 +4094,13 @@ main .right_contents .sns_list svg {
   }
   .qr_pop .step_box p {
     line-height: 1.8;
+  }
+  .vote_pop {
+    width: 80%;
+    height: auto;
+  }
+  .vote_pop .vote_box {
+    margin-bottom: 80px;
   }
 }
 

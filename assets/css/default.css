@@ -2132,6 +2132,10 @@ main .right_contents .sns_list svg {
   margin-bottom: 50px;
 }
 
+.dao_list_complete img {
+  width: 100%;
+}
+
 .dao_list_complete p {
   margin-top: 20px;
   text-align: left;
@@ -4101,6 +4105,34 @@ main .right_contents .sns_list svg {
   }
   .vote_pop .vote_box {
     margin-bottom: 80px;
+  }
+  .dao_list_vote .vote_box {
+    background-position: 50%;
+    height: 220px;
+  }
+  .dao_list_vote .vote_box .vs {
+    width: 20%;
+    top: 80px;
+  }
+  .dao_list_vote .vote_box .vote_vs {
+    width: 90%;
+    margin: 0 auto;
+    top: 90px;
+  }
+  .dao_list_vote .vote_box .vote_vs div span i {
+    font-size: 14px;
+  }
+  .dao_list_vote .vote_box button {
+    width: 135px;
+    left: 7%;
+    bottom: 15px;
+  }
+  .dao_list_vote .vote_box button + button {
+    left: auto;
+    right: 7%;
+  }
+  .dao_list_vote .vote_box button img {
+    width: 100%;
   }
 }
 

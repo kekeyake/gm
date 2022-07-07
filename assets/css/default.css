@@ -2133,7 +2133,8 @@ main .right_contents .sns_list svg {
 }
 
 .dao_list_complete img {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .dao_list_complete p {
@@ -2176,7 +2177,7 @@ main .right_contents .sns_list svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 19px;
+  font-size: 30px;
   color: #fff;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.5);
@@ -2190,12 +2191,12 @@ main .right_contents .sns_list svg {
      -moz-appearance: none;
           appearance: none;
   background-color: transparent;
-  left: 34px;
+  left: 100px;
   cursor: pointer;
 }
 
 .dao_list_vote .vote_box button + button {
-  left: 322px;
+  left: 380px;
 }
 
 .dao_list_vote .vote_box .vs {
@@ -2203,7 +2204,7 @@ main .right_contents .sns_list svg {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: 90px;
+  top: 70px;
 }
 
 .dao_list_vote .vote_box .vote_vs {
@@ -2212,7 +2213,7 @@ main .right_contents .sns_list svg {
   border: 1px solid #fff;
   position: absolute;
   left: 50%;
-  top: 120px;
+  top: 95px;
   -webkit-transform: translateX(-50%) skew(-20deg);
           transform: translateX(-50%) skew(-20deg);
   display: -webkit-box;
@@ -2225,6 +2226,7 @@ main .right_contents .sns_list svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .dao_list_vote .vote_box .vote_vs div span {
@@ -2236,42 +2238,44 @@ main .right_contents .sns_list svg {
           align-items: center;
   height: 100%;
   background-color: #fff;
-  font-weight: 700;
-  font-size: 22px;
   -webkit-transform: skew(0deg);
           transform: skew(0deg);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
-}
-
-.dao_list_vote .vote_box .vote_vs div span i {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  font-style: normal;
-  -webkit-transform: translate(-50%, -50%) skew(20deg);
-          transform: translate(-50%, -50%) skew(20deg);
 }
 
 .dao_list_vote .vote_box .vote_vs div.like {
-  background-color: #7b2bfe;
+  background-color: #fff;
 }
 
 .dao_list_vote .vote_box .vote_vs div.like span {
-  color: #7b2bfe;
+  color: #fff;
+  background-color: #ff596f;
 }
 
 .dao_list_vote .vote_box .vote_vs div.hate {
-  background-color: #fdb525;
+  background-color: #fff;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
 .dao_list_vote .vote_box .vote_vs div.hate span {
-  color: #fdb525;
+  color: #fff;
+  background-color: #00e5fe;
+}
+
+.dao_list_vote .vote_box .vote_vs div i {
+  position: absolute;
+  left: 50%;
+  top: -55px;
+  font-style: normal;
+  font-size: 45px;
+  color: #fff;
+  font-weight: 700;
+  -webkit-transform: translateX(-50%) skew(20deg);
+          transform: translateX(-50%) skew(20deg);
 }
 
 .dao_list_vote ul {

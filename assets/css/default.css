@@ -1239,7 +1239,7 @@ main .content_wrap .sort_wrap {
 }
 
 main .content_wrap .sort_wrap .pc_btn button {
-  padding: 8px 16px;
+  padding: 8px 12px;
   font-size: 16px;
   border: 0 solid #000;
   background: transparent;
@@ -1248,7 +1248,7 @@ main .content_wrap .sort_wrap .pc_btn button {
   cursor: pointer;
 }
 
-main .content_wrap .sort_wrap .pc_btn button i {
+main .content_wrap .sort_wrap .pc_btn button img, main .content_wrap .sort_wrap .pc_btn button i {
   display: none;
   margin-right: 10px;
 }
@@ -1258,8 +1258,9 @@ main .content_wrap .sort_wrap .pc_btn button.on {
   font-weight: 600;
 }
 
-main .content_wrap .sort_wrap .pc_btn button.on i {
+main .content_wrap .sort_wrap .pc_btn button.on img, main .content_wrap .sort_wrap .pc_btn button.on i {
   display: inline-block;
+  vertical-align: middle;
 }
 
 main .content_wrap .sort_wrap .m_btn {
@@ -5050,6 +5051,134 @@ kbd {
 
 .cont-wrap + .pc-cont {
   display: block;
+}
+
+.my-balance {
+  padding: 25px 20px 20px;
+}
+
+.my-balance__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  padding-left: 11px;
+}
+
+.my-balance__tit {
+  font-size: 22px;
+  color: #000;
+  font-weight: 500;
+}
+
+.my-balance__more {
+  width: 20px;
+  height: 20px;
+  background: url(../img/ico/more.png) no-repeat 50% 50%;
+  border: 0 solid #000;
+  cursor: pointer;
+}
+
+.my-balance .pointBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10px;
+}
+
+.my-balance .pointBox span {
+  margin-left: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.my-balance .pointBox.vp {
+  margin-bottom: 7px;
+}
+
+.my-balance ul {
+  margin-top: 30px;
+  border-top: 1px solid #ececec;
+  padding: 20px 10px 10px;
+}
+
+.my-balance ul li {
+  padding-left: 10px;
+  position: relative;
+}
+
+.my-balance ul li::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.my-balance ul li span {
+  color: #ff5a5a;
+  text-decoration: underline;
+}
+
+.my-balance ul li + li {
+  margin-top: 5px;
+}
+
+.my-balance ul li + li span {
+  color: #1aa993;
+  text-decoration: underline;
+}
+
+.my-balance ul a {
+  font-size: 14px;
+  color: #222;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.mypage-nav {
+  padding: 15px 0 15px 36px;
+}
+
+.mypage-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mypage-nav__list a {
+  padding: 15px 0 15px 40px;
+  color: #000;
+  position: relative;
+}
+
+.mypage-nav__list a img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.mypage-nav__list a:hover span {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {

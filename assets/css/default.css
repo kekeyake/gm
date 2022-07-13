@@ -5184,6 +5184,9 @@ kbd {
 .simple-noti {
   overflow: hidden;
   padding-bottom: 50px;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 
 .simple-noti__header {
@@ -5225,10 +5228,13 @@ kbd {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .simple-noti__header label span {
   text-decoration: underline;
+  font-size: 14px;
+  margin-left: 4px;
 }
 
 .simple-noti__header input {
@@ -5390,6 +5396,7 @@ kbd {
   font-size: 14px;
   color: #352346;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .simple-noti .btnViewMore span {
@@ -5518,5 +5525,150 @@ kbd {
     width: 32px;
     height: 32px;
     fill: #4c79c5;
+  }
+  .simple-noti__header {
+    padding: 12px 10px 13px;
+  }
+  .simple-noti__row {
+    border-bottom: 1px solid #f1f2f3;
+    padding: 22px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .simple-noti__state {
+    margin-right: auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .simple-noti__state span {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 93px;
+    height: 23px;
+    border-radius: 11px;
+    font-size: 14px;
+  }
+  .simple-noti__state span.voting {
+    background-color: #fff1c5;
+    color: #cdb56c;
+  }
+  .simple-noti__state span.voted {
+    background-color: #dfebd8;
+    color: #95be7c;
+  }
+  .simple-noti__state span.commented {
+    background-color: #e0e8ee;
+    color: #9db3d8;
+  }
+  .simple-noti__state span.rewarded {
+    background-color: #efe1e1;
+    color: #d3a8a8;
+  }
+  .simple-noti__text {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 10px;
+    color: #4f585b;
+  }
+  .simple-noti__text .t1 {
+    font-weight: 14px;
+    font-weight: 700;
+  }
+  .simple-noti__text .t1 img {
+    vertical-align: middle;
+    margin-left: 3px;
+  }
+  .simple-noti__text .t2 span {
+    color: #ff5a5a;
+  }
+  .simple-noti__info {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 12px;
+  }
+  .simple-noti__info span {
+    font-size: 14px;
+  }
+  .simple-noti__info a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 63px;
+    height: 23px;
+    padding-top: 2px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #515151;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #fff;
+  }
+  .simple-noti .btnViewMore {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 230px;
+    height: 31px;
+    margin: 0 auto;
+    border: 0 solid #000;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #352346;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .simple-noti .btnViewMore span {
+    padding-left: 18px;
+    background: url(../img/ico/arrow_down_double.png) no-repeat 0 50%;
   }
 }

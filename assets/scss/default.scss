@@ -3873,6 +3873,7 @@ kbd {
 .simple-noti {
     overflow: hidden;
     padding-bottom: 50px;
+    order: 3;
     &__header {
         background-color: #f1f2f3;
         padding:12px 30px 13px;
@@ -3898,8 +3899,11 @@ kbd {
         label {
             display: flex;
             align-items: center;
+            cursor: pointer;
             span {
                 text-decoration: underline;
+                font-size: 14px;
+                margin-left: 4px;
             }
         }
         input {
@@ -4007,6 +4011,7 @@ kbd {
         font-size: 14px;
         color:#352346;
         font-weight: 700;
+        cursor: pointer;
         span {
             padding-left: 18px;
             background: url(../img/ico/arrow_down_double.png) no-repeat 0 50%;    
@@ -4113,5 +4118,113 @@ kbd {
             }
         }
 
+    }
+
+    .simple-noti {      
+        &__header {
+            padding:12px 10px 13px; 
+        }
+        &__row {
+            border-bottom: 1px solid #f1f2f3;
+            padding:22px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        &__state {
+            margin-right: auto;
+            order: 1;
+            span {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 93px;
+                height: 23px;
+                border-radius: 11px;
+                font-size: 14px;
+                &.voting {
+                    background-color: #fff1c5;
+                    color:#cdb56c;
+                }
+                &.voted {
+                    background-color: #dfebd8;
+                    color:#95be7c;
+                }
+                &.commented {
+                    background-color: #e0e8ee;
+                    color:#9db3d8;
+                }
+                &.rewarded {
+                    background-color: #efe1e1;
+                    color:#d3a8a8;
+                }
+            }
+        }
+        &__text {
+            order: 3;
+            width: 100%;
+            margin-left: 0;
+            margin-top: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            color:#4f585b;
+            .t1 {            
+                font-weight: 14px;
+                font-weight: 700;
+                img {
+                    vertical-align: middle;
+                    margin-left: 3px;
+                }
+            }
+            .t2 {
+                span {
+                    color:#ff5a5a;
+                }
+            }
+        }
+        &__info {
+            order: 2;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+            span {
+                font-size: 14px;
+            }
+            a {
+                display: flex;
+                width: 63px;
+                height: 23px;
+                padding-top: 2px;
+                justify-content: center;
+                align-items: center;
+                background-color: #515151;
+                border-radius: 5px;
+                font-size: 12px;
+                color:#fff;
+            }
+        }
+        .btnViewMore {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 230px;
+            height: 31px;
+            margin:0 auto;
+            border: 0 solid #000;
+            border-radius: 5px;
+            font-size: 14px;
+            color:#352346;
+            font-weight: 700;
+            cursor: pointer;
+            span {
+                padding-left: 18px;
+                background: url(../img/ico/arrow_down_double.png) no-repeat 0 50%;    
+            }
+        }
+    
     }
 }

@@ -2352,7 +2352,7 @@ main {
     top:50%;
     transform: translate(-50%,-50%);
     width: 514px;
-    height: 485px;
+    max-height: 485px;
     background-color: #fff;
     border-radius: 20px;
     padding:30px;
@@ -2377,6 +2377,7 @@ main {
     }
     .vote_box {
         margin-top: 30px;
+        margin-bottom: 100px;
         border-radius: 20px;;
         background-color: #f2f2f2;
         padding:20px;
@@ -2429,6 +2430,97 @@ main {
             font-size: 15px;
         }
 
+    }
+
+    .rewardWrap {
+        margin-top: 30px;
+        max-height: 430px;
+        overflow-y: auto;
+        position: relative;
+        &__header {
+            height: 37px;
+            margin-bottom: 2px;
+            padding-right: 25px;
+            position: sticky;
+            left: 0;
+            top:0;
+            border-radius: 5px;
+            background-color: #f1f2f3;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            .point_box {
+                display: flex;
+                align-items: center;
+                div {
+                    width: 90px;
+                    display: flex;
+                    justify-content:flex-end;
+                    align-items: center;
+                    span {
+                        font-weight: 700;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+        &__list {
+            border-radius: 5px;
+            background-color: #f1f2f3;
+            padding:5px 25px;
+        }
+        &__row {
+            padding:8px 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            div {
+                font-size: 18px;
+                font-weight: 400;
+                width: 90px;
+                display: flex;
+                justify-content:flex-end;
+            }
+            .pt {
+                color:#ff5a5a;
+                font-weight: 700;
+                margin-right: 5px;
+            }
+        }
+        &__user {
+            font-size: 16px;
+            font-weight: 700;
+            color:#17181b;
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+            img {
+                margin-right:10px;
+            }
+        }
+
+        &__voted {
+            width: 118px;
+            height: 37px;
+            position: relative;
+            color:#fff;
+            font-weight: 700;
+            line-height: 37px;
+            box-sizing: border-box;
+            &.like {
+                padding-left: 54px;
+                background: #634ed1 url(../img/ico_like2.png) no-repeat 16px 50%;
+            }
+            &.hate {
+                padding-left: 54px;
+                background: #e8943b url(../img/ico_hate2.png) no-repeat 16px 50%;
+            }
+            img {
+                width: 60px;
+                position: absolute;
+                right: -50px;
+            }
+        }
     }
 }
 @media screen and (min-width:768px) and (max-width: 1279px) {
@@ -3074,6 +3166,69 @@ main {
         height: auto;
         .vote_box {
             margin-bottom: 80px;
+        }
+        .rewardWrap {
+            margin-top: 20px;
+            max-height: auto;
+            overflow-y: auto;
+            position: relative;
+            &__header {               
+                .point_box {
+                    display: none;                   
+                }
+            }
+            &__list {
+                padding:5px 15px;
+            }
+            &__row {
+                div {
+                    font-size: 14px;
+                    font-weight: 400;
+                    width: 50px;
+                    display: flex;
+                    justify-content:flex-end;
+                }
+                .pt {
+                    color:#ff5a5a;
+                    font-weight: 700;
+                    margin-right: 5px;
+                }
+            }
+            &__user {
+                font-size: 14px;
+                font-weight: 700;
+                color:#17181b;
+                display: flex;
+                align-items: center;
+                margin-right: auto;
+                img {
+                    margin-right:10px;
+                    width: 24px;
+                }
+            }
+    
+            &__voted {
+                width: 118px;
+                height: 37px;
+                position: relative;
+                color:#fff;
+                font-weight: 700;
+                line-height: 37px;
+                box-sizing: border-box;
+                &.like {
+                    padding-left: 54px;
+                    background: #634ed1 url(../img/ico_like2.png) no-repeat 16px 50%;
+                }
+                &.hate {
+                    padding-left: 54px;
+                    background: #e8943b url(../img/ico_hate2.png) no-repeat 16px 50%;
+                }
+                img {
+                    width: 60px;
+                    position: absolute;
+                    right: -50px;
+                }
+            }
         }
     }
 

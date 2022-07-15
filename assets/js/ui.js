@@ -191,3 +191,18 @@ for (const optBtn of optBtns) {
     optionMenu();
   });
 }
+
+if ( document.querySelectorAll('.mission-history__row').length > 0 ) {
+  let rows = document.querySelectorAll('.mission-history__row');
+  rows.forEach((targetDetail) => {
+      targetDetail.addEventListener('click', function() {
+          rows.forEach(row => {
+              if (row !== targetDetail) {
+                  row.classList.remove('open');
+              } else {
+                row.classList.add('open');
+              }
+          });
+      });
+  });
+}
